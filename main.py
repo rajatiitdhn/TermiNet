@@ -16,8 +16,8 @@ print(pwd)
 # )
 mydb = mysql.connector.connect(
   host=host_point,
-  user="avnadmin",
-  password=passwd, port=11493,database="defaultdb"
+  user="root",
+  password=passwd, port=3306,database="defaultdb"
 )
 
 
@@ -37,7 +37,7 @@ def createtable():
 );"""
     cursor.execute(create_table_sql)
     time.sleep(5)
-    print(cursor.execute("show tables;").fetchone())
+    #print(cursor.execute("show tables;").fetchone())
 
 #createtable()
 
